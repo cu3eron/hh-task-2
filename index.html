@@ -55,12 +55,10 @@
             min-width: 0;
         }
 
-        /* Скрываем строки по умолчанию */
         .row {
             display: none;
         }
 
-        /* Показываем строки для мобильной версии */
         @media (max-width: 800px) {
             .row.mobile {
                 display: flex;
@@ -68,7 +66,6 @@
             }
         }
 
-        /* Показываем строки для десктопной версии */
         @media (min-width: 801px) {
             .row.desktop {
                 display: flex;
@@ -82,7 +79,6 @@
             <source src="video.mp4" type="video/mp4">
             Ваш браузер не поддерживает видео.
         </video>
-        <!-- Строки для мобильной версии -->
         <div class="row mobile" id="row1">
             <span class="text">We're here</span>
             <span class="space"></span>
@@ -111,8 +107,6 @@
             <span class="text">and happier</span>
             <span class="space"></span>
         </div>
-
-        <!-- Строки для десктопной версии -->
         <div class="row desktop" id="row7">
             <span class="text">We're here</span>
             <span class="space"></span>
@@ -142,10 +136,8 @@
         function adjustLayout() {
             const container = document.querySelector('.container');
             if (window.innerWidth <= 800) {
-                // Для мобильной версии
                 container.style.width = "100%";
             } else {
-                // Для десктопной версии
                 container.style.width = "auto";
             }
         }
